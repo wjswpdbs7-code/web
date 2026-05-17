@@ -1,0 +1,215 @@
+
+<!-- body
+    player1_zone
+        player1_info
+            player1_name
+            player1_image
+        Player1_score_zone
+            player1_score
+    player2_zone
+        player2_info
+            player2_name
+            player2_image
+        Player2_score_zone
+            player2_score
+    VS_zone
+        VS_text -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game!</title>
+    <style>
+
+
+        body {
+            background-color: rgb(255, 120, 31);
+            background: radial-gradient(circle, rgb(255, 190, 31, 1) 0%, rgba(255, 120, 31, 1) 100%);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh; 
+        }
+
+        .player1_zone
+        {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex : 1;
+            height: 100%;
+            width: 45%;
+        }
+        .player2_zone
+        {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex : 1;
+            height: 100%;
+            width: 45%; 
+        }
+        .player1_info{
+            position: absolute;
+            width: 90%;
+            height: 15%;
+            margin-bottom: 20px;
+            top: 5%;
+            left : 5%;
+            background-color: white;
+            border-radius: 50px;
+
+        }
+        .player2_info{
+            position: absolute;
+            width: 90%;
+            height: 15%;
+            margin-bottom: 20px;
+            top: 5%;
+            right : 5%;
+            background-color: white;
+            border-radius: 50px;
+        }
+        .player1_info img {
+            position: absolute;
+            border-radius: 50%;
+            object-fit: cover;
+            width: 100px;
+            height: 100px;
+            top : 10%;
+            left : 5%;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 0px;
+        }
+        
+        .player2_info img{
+            position: absolute;
+            border-radius: 50%;
+            object-fit: cover;
+            width: 100px;
+            height: 100px;
+            top : 10%;
+            right : 5%;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 0px;
+        }
+        .player1_info h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .player2_info h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .player1_score_zone{
+            position: absolute;
+            bottom: 30%;
+            left: 30%;
+            font-size: 96px;
+            font-weight: bold;
+            color: white;
+        }
+        .player2_score_zone{
+            position: absolute;
+            bottom: 30%;
+            right: 30%;
+            font-size: 96px;
+            font-weight: bold;
+            color: white;
+        }
+        .vs_zone{
+            position: absolute;
+            font-size: 72px;
+            font-weight: bold;
+            color: white;
+        }
+        .vs_zone h2{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        @media screen and (max-width: 900px) {
+
+            body {
+                flex-direction: column;
+            }
+            .player1_zone {
+                width: 100%;
+                height: 50%;
+            }
+            .player2_zone {
+                width: 100%;
+                height: 50%;
+            }
+            .player1_info {
+                width: 80%;
+                height: 20%;
+                top: 10%;
+                left: 10%;
+            }
+            .player2_info {
+                width: 80%;
+                height: 20%;
+                top: 90%;
+                right: 10%;
+            }
+            .player1_score_zone {
+                bottom: 20%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .player2_score_zone {
+                bottom: 20%;
+                right: 50%;
+                transform: translateX(50%);
+            }
+             .vs_zone {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            
+        }
+
+    </style>
+            
+</head>
+<body>
+    <div class="player1_zone">
+        <div class="player1_info">
+            <h1>Player 1</h1>
+            <img src="img/player1.JPG" alt="db에서 받아온 1p 이미지" >
+        </div>
+        <div class="player1_score_zone">
+            <h2>0</h2>
+        </div>
+    </div>
+    <div class="vs_zone">
+        <h2>VS</h2>
+    </div>
+    <div class="player2_zone">
+        <div class="player2_info">
+            <h1>Player 2</h1>
+            <img src="img/player2.JPG" alt="db에서 받아온 2p 이미지" >
+        </div>
+        <div class="player2_score_zone">
+            <h2>0</h2>
+        </div>
+    </div>
+
+</body>
+</html>
